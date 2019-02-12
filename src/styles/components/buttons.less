@@ -1,28 +1,12 @@
-button {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 2px solid black;
-  padding: .375rem .75rem;
-  font-size: 20px;
-  line-height: 1.5;
-  border-radius: .25rem;
-  background-color: inherit;
-  color: @color-white;
+@import "../mixins/mixins-button";
 
+[class*='c-btn--'] {
+  height: 48px;
+  text-decoration: none;
+  border: 1px solid @color-gray;
+  border-radius: @border-radius-base;
+}
 
-  span {
-    color: @color-blue;
-    font-size: 14px;
-  }
-
-  &:hover {
-    background-color: #4798d9;
-  }
+.c-btn--blue {
+  .mixin-button-variant(@color-white; @color-blue; @color-blue);
 }
