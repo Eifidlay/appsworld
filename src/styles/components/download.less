@@ -1,0 +1,27 @@
+@import "../mixins/mixins-button";
+
+.c-download {
+  display: flex;
+  min-height: 86px;
+  padding: @space-half @space-double;
+  border: 2px solid;
+  border-radius: @border-radius-base;
+  .mixin-button-variant(@color-white; transparent; @color-white; @color-white; @color-blue; @color-blue);
+
+  .c-info {
+    color: @color-blue-light;
+    font-size: .9375em;
+  }
+
+  .c-title {
+    font-family: @font-family-mont-regular;
+    font-size: 1.25em;
+    font-weight: 700;
+  }
+  &__content {
+    padding-left: @space-half;
+    text-align: center;
+  }
+}
+
+
